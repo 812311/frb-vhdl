@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 30.586 ns
+From           : Reset
+To             : ARR_DESTINOS_SIG[4][1]
+From Clock     : --
+To Clock       : Clock_48Mhz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.559 ns
+From           : VGA_SYNC:Comp_VGA_sync|green_out
+To             : VGA_green
+From Clock     : Clock_48Mhz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.091 ns
+From           : Keyboard_data
+To             : ReadKeyboard:Comp_ReadKeyboard|keyboard:Comp_keyboard|SHIFTIN[8]
+From Clock     : --
+To Clock       : Clock_48Mhz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'VGA_SYNC:Comp_VGA_sync|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0'
+Slack          : -26.682 ns
+Required Time  : 25.20 MHz ( period = 39.681 ns )
+Actual Time    : N/A
+From           : ReadKeyboard:Comp_ReadKeyboard|altsyncram:Mux0_rtl_0|altsyncram_gs11:auto_generated|ram_block1a1~porta_address_reg7
+To             : ARR_DESTINOS_SIG[4][1]
+From Clock     : Clock_48Mhz
+To Clock       : VGA_SYNC:Comp_VGA_sync|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0
+Failed Paths   : 2084
+
+Type           : Clock Setup: 'Clock_48Mhz'
+Slack          : -10.420 ns
+Required Time  : 48.00 MHz ( period = 20.833 ns )
+Actual Time    : N/A
+From           : VGA_SYNC:Comp_VGA_sync|pixel_row[1]
+To             : Char_ROM:Call_Char|lpm_rom:char_gen_rom|altrom:srom|altsyncram:rom_block|altsyncram_ksv:auto_generated|ram_block1a2~porta_address_reg6
+From Clock     : VGA_SYNC:Comp_VGA_sync|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0
+To Clock       : Clock_48Mhz
+Failed Paths   : 166
+
+Type           : Clock Hold: 'Clock_48Mhz'
+Slack          : 0.863 ns
+Required Time  : 48.00 MHz ( period = 20.833 ns )
+Actual Time    : N/A
+From           : ReadKeyboard:Comp_ReadKeyboard|keyboard:Comp_keyboard|filter[5]
+To             : ReadKeyboard:Comp_ReadKeyboard|keyboard:Comp_keyboard|filter[4]
+From Clock     : Clock_48Mhz
+To Clock       : Clock_48Mhz
+Failed Paths   : 0
+
+Type           : Clock Hold: 'VGA_SYNC:Comp_VGA_sync|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0'
+Slack          : 0.869 ns
+Required Time  : 25.20 MHz ( period = 39.681 ns )
+Actual Time    : N/A
+From           : VGA_SYNC:Comp_VGA_sync|vert_sync
+To             : VGA_SYNC:Comp_VGA_sync|vert_sync_out
+From Clock     : VGA_SYNC:Comp_VGA_sync|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0
+To Clock       : VGA_SYNC:Comp_VGA_sync|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 2250
+
+--------------------------------------------------------------------------------------
+
